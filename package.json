@@ -10,6 +10,8 @@
     "ejs": "*",
     "morgan": "~1.6.1",
     "excel-push-pull":"latest",
-    "jsonfile":"latest"
+    "jsonfile":"latest",
+    "excel":"latest",
+    "node-xlsx":"latest"
   }
 }
