@@ -28,7 +28,7 @@ function parser_body(workSheetno,key){
 		var end;
 		var temp;
 		var data={};
-		for(var i = 0;i<6;i++){
+		for(var i = 0;i<key.length;i++){
 			if(i===0){
 				end=rows.indexOf(',');
 				temp = rows.substring(start, end);
@@ -44,10 +44,16 @@ function parser_body(workSheetno,key){
 			}
 			test.push(temp);
 		}
+		var nullcheck = true;
 		for(var i = 0 ; i<test.length;i++){
+			if(test[0]===""){
+				nullcheck=false;
+			}
 			data[key[i]] = test[i];
 		}
-		jsonData.push(data);	
+		if(nullcheck){
+			jsonData.push(data);
+		}		
 	}
 	return jsonData;
 }
