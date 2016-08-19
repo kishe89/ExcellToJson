@@ -3,7 +3,6 @@
  */
 var Pull = require('excel-push-pull').Pull;
 var pull = new Pull();
-var fs = require('fs');
 var jsonfile = require('jsonfile');
 pull.setFilePath('./excel/spotdata.xlsx');
 pull.records(function(err, records) {
